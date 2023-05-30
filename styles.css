@@ -1,0 +1,100 @@
+body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      
+    }
+   
+
+    @media (max-width: 600px) {
+    .container {
+    max-width: 100%;}
+    }
+    #grid {
+        height: 100vh;
+      }
+      
+      #left {
+        padding-left: 50px;
+        background: linear-gradient(to top right, rgb(100, 43, 115), rgb(198, 66, 110));
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      
+      #left div {
+        padding: 10px;
+      }
+      
+      #left div:last-child {
+        margin-bottom: 20px;
+      }
+      
+      #home, #game, #about, #contact {
+        color: white;
+        list-style: none;
+        line-height: 17px;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 10px 0;
+      }
+      
+      
+      #right {
+        background: linear-gradient(to top right, rgb(19, 38, 211), rgb(230, 100, 40));
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+        padding: 10px;
+      }
+         
+    #picture{
+        padding: 10px;
+        width: 200px;
+        height: 200px;
+        display: flex;
+       
+        
+    }
+    #grid:has(#left:hover) {
+    grid-template-columns: 12% auto;
+    }
+
+    #grid {
+    transition: 300ms;
+    display: grid;
+    grid-template-columns: var(--left, 48px) auto;
+    }
+      
+    #grid:has(#left:hover) {
+    --left: 12%;
+    }
+    #home, #game, #about, #contact {
+        color: white;
+        list-style: none;
+        line-height: 17px;
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 40px;
+    }
+    #scrollbar::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+    #scrollbar::-webkit-scrollbar-track {
+        border-radius: 8px;
+        background-color: #e7e7e7;
+        border: 1px solid #cacaca;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    }
+    
+    #scrollbar::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background-color: #363636;
+    }
+    

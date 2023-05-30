@@ -9,69 +9,37 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <title>GameTrackr</title>
 
-    <style>
-        body {
-            background-image: url('imagens/background.jpg');
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: 'Roboto Mono', monospace;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: rgba(175, 174, 174, 0);
-            backdrop-filter: saturate(180%) blur(5px);
-            padding: 20px;
-            border-radius: 5px;
-            text-shadow: -2px 3px 6px #000000;
-        }
-
-        label {
-            margin-bottom: 10px;
-        }
-
-        input {
-            padding: 10px;
-            margin-bottom: 20px;
-            border: none;
-            border-radius: 3px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-            width: 100%;
-        }
-
-        button {
-            background-color: #6719f8;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #490db8;
-        }
-    </style>
 </head>
 
 <body>
 
     <form method="get" action="/ProfileInfo/SummonerInfo">
-        <label for="region">Region:</label>
-        <input type="text" id="region" name="region">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-        <button type="submit">Submit</button>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" placeholder="digite o nome desejado">
+        <label for="region">Região:</label>
+        <select>
+            <option id="region" name="region">selecione o server</option><br>
+            <option>BR1</option><br>
+            <option>EUN1</option><br>
+            <option>EUW1</option><br>
+            <option>JP1</option><br>
+            <option>KR</option><br>
+            <option>LA1</option><br>
+            <option>LA2</option><br>
+            <option>NA1</option><br>
+            <option>OC1</option><br>
+            <option>PH2</option><br>
+            <option>RU</option><br>
+            <option>SG2</option><br>
+            <option>TH2</option><br>
+            <option>TR1</option><br>
+            <option>TW2</option><br>
+            <option>VN2</option><br>
+        </select>
+        <a><button type="submit">Buscar</button></a>
     </form>
 
 </body>

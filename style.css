@@ -1,1 +1,66 @@
 
+    .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    }
+    @media (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+    }
+body {
+    background-image: url('imagens/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.041);
+    backdrop-filter: saturate(180%) blur(5px);
+    height: 200px;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    text-shadow: -2px 3px 6px #000000;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(95, 95, 95, 0.2);
+    width: 100%;
+}
+
+button {
+    background-color: #6719f8;
+    margin-top: 10px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #490db8;
+}
