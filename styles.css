@@ -12,6 +12,8 @@ body {
   }
   
   #top{
+    display: flex;
+    flex-direction: row;
     margin: 0 auto;
     padding: 0;
     width: 100%;
@@ -20,15 +22,18 @@ body {
   }
 
   #top button{
-    size: 20px;
+    width: 35px;
+    height: 35px;
     border-radius: 15px;
-    border: black solid 1px;
-    background-color: #d788eb;
-  }
+    border: none;
+    background-color: #b430d4;
+    justify-content: flex-end;  
+}
 
   #top img{
+    width: 15px;
     margin: 0 auto;
-    text-align: center;
+    justify-content: center;
 
   }
 
@@ -41,6 +46,7 @@ body {
   
   
   #mid {
+    margin-top: 10px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 5px;
@@ -65,20 +71,21 @@ body {
   @media (min-width: 480px) and (max-width: 768px) and (orientation: landscape) {
     #top {
       height: 80px;
-      min-width: 768px;
+      min-width: 100%;
     }
     
-    #top li {
-      display: block;
-      text-align: center;
-      margin-bottom: 10px;
+    #top a,ul,li{
+      list-style: none;
+      display: inline-block;
+      text-decoration-line: none;
+      margin: 10px;
     }
     
     #mid {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 5px;
       padding: 5px;
-      
+      flex-wrap: wrap;
     }
     
     .picture {
@@ -89,12 +96,14 @@ body {
   @media (max-width: 768px) {
     #top {
       height: 80px;
+      width: auto;
     }
     
-    #top li {
-      display: block;
-      text-align: center;
-      margin-bottom: 10px;
+    #top a,ul,li{
+      list-style: none;
+      display: inline-block;
+      text-decoration-line: none;
+      margin: 10px;
     }
     
     #mid {
@@ -109,11 +118,41 @@ body {
   }
   
   /* Tablet */
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: 768px) and (max-width: 1180px) {
+    #top {
+      height: 70px;
+      width: auto;
+    }
+
+    #top a,ul,li{
+      list-style: none;
+      display: inline-block;
+      text-decoration-line: none;
+      margin: 10px;
+    }
+    
+    #mid {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 7px;
+      padding: 7px;
+    }
+    
+    .picture {
+      padding: 4px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     #top {
       height: 70px;
     }
     
+    #top a,ul,li{
+    list-style: none;
+    display: inline-block;
+    text-decoration-line: none;
+    margin: 10px;
+  }
     #mid {
       grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 7px;
