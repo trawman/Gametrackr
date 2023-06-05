@@ -11,10 +11,7 @@
     }
     }
 body {
-    background-image: url('imagens/background.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    background-color: #4e1caaa1;
     display: flex;
     justify-content: center;
     align-items: center;
