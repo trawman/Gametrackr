@@ -16,6 +16,8 @@ body {
     align-items: center;
     height: 80px;
     background-color: rgb(211 59 251);
+    margin-top: -8px;
+    margin-left: ;
   }
 
   #top button{
