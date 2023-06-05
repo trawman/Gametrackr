@@ -4,19 +4,16 @@ body {
   }
   
   .container{
-    margin: 0 auto;
+    margin: auto;
     padding: 0;
-    min-width: 1024px;
     max-width: 1280px;
     justify-content: center;
   }
   
   #top{
     display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
+    justify-content: space-between;
+    align-items: center;
     height: 80px;
     background-color: rgb(211 59 251);
   }
@@ -27,7 +24,8 @@ body {
     border-radius: 15px;
     border: none;
     background-color: #b430d4;
-}
+    margin: 20px;
+  }
 
   #top img{
     width: 15px;
@@ -38,7 +36,8 @@ body {
 
   #top a,ul,li{
     list-style: none;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
     text-decoration-line: none;
     margin: 10px;
   }
@@ -55,8 +54,8 @@ body {
   .picture {
     width: 100%;
     height: auto;
-    display: flex;
     padding: 2px;
+    border-radius: 20px;
   }
   
   img {
@@ -75,7 +74,8 @@ body {
     
     #top a,ul,li{
       list-style: none;
-      display: inline-block;
+      display: flex;
+      flex-direction: row;
       text-decoration-line: none;
       margin: 10px;
     }
@@ -100,7 +100,8 @@ body {
     
     #top a,ul,li{
       list-style: none;
-      display: inline-block;
+      display: flex;
+      flex-direction: row;
       text-decoration-line: none;
       margin: 10px;
     }
@@ -125,7 +126,8 @@ body {
 
     #top a,ul,li{
       list-style: none;
-      display: inline-block;
+      display: flex;
+      flex-direction: row;
       text-decoration-line: none;
       margin: 10px;
     }
@@ -147,17 +149,19 @@ body {
     }
     
     #top a,ul,li{
-    list-style: none;
-    display: inline-block;
-    text-decoration-line: none;
-    margin: 10px;
-  }
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      text-decoration-line: none;
+      margin: 10px;
+    }
+
     #mid {
       grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 7px;
       padding: 7px;
     }
-    
+
     .picture {
       padding: 4px;
     }
