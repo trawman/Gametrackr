@@ -13,36 +13,35 @@
     <title>GameTrackr</title>
 
 </head>
-
 <body>
 
+<div id="container">
     <form method="get" action="/ProfileInfo/SummonerInfo">
         <label for="name">Nome:</label>
         <input type="text" id="name" name="name" placeholder="digite o nome desejado">
         <label for="region">Região:</label>
-        <select>
-            <option id="region" name="region">selecione o server</option><br>
-            <option>BR1</option><br>
-            <option>EUN1</option><br>
-            <option>EUW1</option><br>
-            <option>JP1</option><br>
-            <option>KR</option><br>
-            <option>LA1</option><br>
-            <option>LA2</option><br>
-            <option>NA1</option><br>
-            <option>OC1</option><br>
-            <option>PH2</option><br>
-            <option>RU</option><br>
-            <option>SG2</option><br>
-            <option>TH2</option><br>
-            <option>TR1</option><br>
-            <option>TW2</option><br>
-            <option>VN2</option><br>
-        </select>
+            <select id="region" name="region">
+                <option>selecione o server</option>
+                <option>BR1</option>
+                <option>EUN1</option>
+                <option>EUW1</option>
+                <option>JP1</option>
+                <option>KR</option>
+                <option>LA1</option>
+                <option>LA2</option>
+                <option>NA1</option>
+                <option>OC1</option>
+                <option>PH2</option>
+                <option>RU</option>
+                <option>SG2</option>
+                <option>TH2</option>
+                <option>TR1</option>
+                <option>TW2</option>
+                <option>VN2</option>
+            </select>
         <a><button type="submit">Buscar</button></a>
     </form>
+</div>
 
 </body>
 </html>
-
- 
