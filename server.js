@@ -29,7 +29,7 @@ const server = http.createServer((req, res) => {
         </head>
         
         <body${isDarkMode ? ' class="dark-mode"' : ''}>
-          <div id="top">
+        <div id="top">
             <ul>
               <li><a href="index.html">Home</a></li>
             </ul>
@@ -84,7 +84,7 @@ const server = http.createServer((req, res) => {
             body.classList.toggle('dark-mode');
             // Salva o estado do tema escuro no cookie
             const isDarkMode = body.classList.contains('dark-mode');
-            document.cookie = `darkMode=${isDarkMode}`;
+            document.cookie = `,darkMode=$,{isDarkMode}`;
           });
         
           // Verifica se existe um cookie para o tema escuro
@@ -183,7 +183,7 @@ const server = http.createServer((req, res) => {
         body.classList.toggle('dark-mode');
         // Salva o estado do tema escuro no cookie
         const isDarkMode = body.classList.contains('dark-mode');
-        document.cookie = `darkMode=${isDarkMode}`;
+        document.cookie = `,darkMode=$,{isDarkMode}`;
       });
     
       // Verifica se existe um cookie para o tema escuro
@@ -204,8 +204,8 @@ const server = http.createServer((req, res) => {
     
     </html>`);
     res.end();
-  });
-  
-  server.listen(3000, () => {
-    console.log('Server is running on port 3000');
-  });
+    }});
+
+server.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
