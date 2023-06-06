@@ -29,7 +29,6 @@
     <ul>
       <li><a href="login.html">Home</a></li>
     </ul>
-    <img src="imagens/home.svg">
     <button id="dark-mode">
       <img src="imagens/dark.svg">
     </button>
@@ -72,6 +71,13 @@
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </div>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <p>clicando em confirmar voce aceita nossos termos de uso de cookies e politica de privacidade</p>
+        <button id="botao1">aceito</button>
+        <button id="botao2">não aceito</button>
+      </div>
+    </div>
   </div>
   
   <script>
@@ -98,6 +104,28 @@
       body.classList.add('dark-mode');
     }
   }
+  </script>
+  
+  <script>
+    function showPopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "block";
+  }
+
+  function hidePopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "none";
+  }
+
+  document.getElementById("botao1").addEventListener("click", function() {
+    document.cookie = "armazenarCookies=true; expires=Thu, 31 Dec 2024 23:59:59 UTC; path=/";
+    hidePopup();
+  });
+  
+  document.getElementById("botao2").addEventListener("click", function() {
+    hidePopup();
+  });
+
   </script>
 </body>
 
