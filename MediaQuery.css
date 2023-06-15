@@ -247,8 +247,8 @@ body {
   height: 43px;
   backdrop-filter: blur(7px);
   transform: translate(-50%, -50%);
-  background-color: rgba(126, 126, 126, 0.555);
-  border-radius: 35px;
+  background-color: rgb(141, 76, 202);
+  border-radius: 15px;
   padding: 20px;
   text-align: start;
   display: flex;
