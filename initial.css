@@ -1,24 +1,104 @@
 body {
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #140731;
+
     }
 
     .container {
       width: 100%;
-      margin: 0 auto;
-      padding: 20px;
     }
 
-    #header {
-      background-image: url(imagens/back.jpeg);
-      padding: 10px;
-      height: max-content;
-    }
-
-    @media only screen and (max-width: 600px) {
-      .container {
-        padding: 10px;
-      }
+    .container{
+      top: 0;
+      height: 200px;
      
     }
+
+
+     h1.grey{
+      position: absolute;
+      margin-top: 110px;
+      margin-left: 70px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 90px;
+      line-height: 42px;
+      color: #adadad;
+    }
+
+    p.color{
+      margin-top: 200px;
+      margin-left: 70px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 42px;
+      color: #adadad;
+    }
+    
+    b.color{
+      background-image: linear-gradient(to right, #ff4da3, #75d1ff);
+      background-clip: text;
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent;
+      color: black;
+    }
+    
+    .container{
+      height: 500px;
+      width: 100%;
+      display: grid;
+    }
+
+    p.gray{
+      position: absolute;
+      margin-top: 180px;
+      margin-left: 70px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 42px;
+      color: #181818;
+      background-color: #ff4da3;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    
+
+    .jst{
+      width: 40%;
+      justify-self: end;
+
+    }
+
+    .seta{
+      width: 5%;
+      position: absolute;
+      right: 50%;
+      bottom: 0%;
+    }
+
+    p.white{
+      position: absolute;
+      margin-top: 380px;
+      margin-left: 70px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 42px;
+      color: #adadad;
+    }
+
+    h1.gray{
+      position: absolute;
+      margin-left: 70px;
+      margin-top: 280px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 90px;
+      line-height: 42px;
+      color: #adadad;
+    }
+    
