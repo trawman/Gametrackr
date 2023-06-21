@@ -1,81 +1,24 @@
-/* Smartphones */
-@media only screen and (max-width: 480px) {
-  
-  .container {
-    height: 300px; 
-  }
-  
-  h1.grey {
-    font-size: 60px; 
-  }
-  
-  p.color {
-    font-size: 24px;
-  }
-  
-  
-}
-
-/* Tablets */
-@media only screen and (min-width: 481px) and (max-width: 1024px) {
-  
-  .container {
-    height: 400px; 
-  }
-  
-  h1.grey {
-    font-size: 80px; 
-  }
-  
-  p.color {
-    font-size: 28px; 
-  }
-  
-  
-}
-
-/* Desktops */
-@media only screen and (min-width: 1025px) {
-  
-  .container {
-    height: 500px; 
-  }
-  
-  h1.grey {
-    font-size: 90px; 
-  }
-  
-  p.color {
-    font-size: 40px; 
-  }
-  
-  
-}
-
-
-body {
-      font-family: 'Inter', sans-serif;
+    body{
+      background-color: #140731;
       margin: 0;
       padding: 0;
-      background-color: #140731;
-
+      font-family: 'Inter', sans-serif;
     }
 
     .container {
-      width: 100%;
+      max-width: 1680px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
     }
 
-    .top{
-      top: 0;
-      height: 300px;
-     
+    .top{ 
+       height: 300px;
     }
 
 
      h1.grey{
       position: absolute;
-      margin-top: 110px;
-      margin-left: 70px;
       font-style: normal;
       font-weight: 600;
       font-size: 90px;
@@ -84,8 +27,7 @@ body {
     }
 
     p.color{
-      margin-top: 200px;
-      margin-left: 70px;
+      margin-top: 160px;
       font-style: normal;
       font-weight: 500;
       font-size: 40px;
@@ -102,15 +44,12 @@ body {
     }
     
     .mid{
-      height: 500px;
-      width: 100%;
-      display: grid;
+      height: 600px;
     }
 
     p.gray{
       position: absolute;
-      margin-top: 180px;
-      margin-left: 70px;
+      margin-top: 100px;
       font-style: normal;
       font-weight: 600;
       font-size: 18px;
@@ -123,22 +62,26 @@ body {
     
 
     .jst{
-      width: 40%;
-      justify-self: end;
-
+      width: 35%;
+      margin-left: 50%;
     }
 
     .seta{
-      width: 4%;
-      position: absolute;
-      right: 50%;
+      width: 5%;
+      margin-right: 50%;
+      margin-left: 50%;
       bottom: 0;
+    }
+
+    .seta:hover {
+      filter: brightness(55%); 
+      transition: filter 0.3s ease-in-out;
+      cursor: pointer;
     }
 
     p.white{
       position: absolute;
       margin-top: 380px;
-      margin-left: 70px;
       font-style: normal;
       font-weight: 500;
       font-size: 32px;
@@ -148,7 +91,6 @@ body {
 
     h1.gray{
       position: absolute;
-      margin-left: 70px;
       margin-top: 280px;
       font-style: normal;
       font-weight: 600;
@@ -156,4 +98,42 @@ body {
       line-height: 42px;
       color: #adadad;
     }
+
+
+    .bot{
+      height: 500px;
+    }
     
+    .zoom-in {
+      animation: zoomIn 1s forwards;
+    }
+    
+    @keyframes zoomIn {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.2);
+      }
+    }
+
+   
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(75, 75, 75) rgb(255, 255, 255);
+}
+
+/* Chrome, Edge, e Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(75, 75, 75);
+  border-radius: 20px;
+  border: 2px solid rgb(255, 255, 255);
+}

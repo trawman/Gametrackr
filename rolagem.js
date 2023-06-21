@@ -1,6 +1,6 @@
 ScrollReveal().reveal('.container', {
     duration: 1000,
-    distance: '50px',
+    distance: '10px',
     easing: 'ease-in-out',
     origin: 'bottom',
     reset: true
@@ -34,3 +34,4 @@ document.addEventListener("DOMContentLoaded", function() {
     bottomElement.scrollIntoView({ behavior: "smooth" });
   });
 });
+
