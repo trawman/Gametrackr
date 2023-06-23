@@ -225,7 +225,7 @@ body {
   background-color: rgb(117, 167, 168);
   display: inline-block;
   position: relative;
-  left: 40px;
+  left: 30px;
   border: none;
   border-radius: 20px;
   padding: 7px;
@@ -236,14 +236,14 @@ body {
 }
 
 #botao2{
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .popup-content {
   position: absolute;
   bottom: -45px;
   left: 50%;
-  width: 70%;
+  width: 80%;
   height: 43px;
   backdrop-filter: blur(7px);
   transform: translate(-50%, -50%);
