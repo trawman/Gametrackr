@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="google-signin-client_id" content="SEU_ID_DO_CLIENTE">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <div id="g_id_onload"
+       data-client_id="SEU_ID_DO_CLIENTE"
+       data-callback="handleCredentialResponse">
+  </div>
+  <div class="g_id_signin" data-type="standard"></div>
+
+  <script>
+    function handleCredentialResponse(response) {
+      // Aqui você pode processar a resposta do token do usuário retornado pelo Google
+      // Envie esse token para o seu servidor e verifique sua autenticidade
+    }
+  </script>
+</body>
+</html>
