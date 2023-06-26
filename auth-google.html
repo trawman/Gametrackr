@@ -7,15 +7,15 @@
 </head>
 <body>
   <div id="g_id_onload"
-       data-client_id="AIzaSyBDE61EjBfKGug5mROjGWDawzDPer_YIXE"
+       data-client_id="314297944264-6oa2s36dno21vmjohh3ecjhhbpp0m71c.apps.googleusercontent.com"
        data-callback="handleCredentialResponse">
   </div>
   <div class="g_id_signin" data-type="standard"></div>
 
   <script>
     function handleCredentialResponse(response) {
-      // Aqui você pode processar a resposta do token do usuário retornado pelo Google
-      // Envie esse token para o seu servidor e verifique sua autenticidade
+      var credentials = response;
+      console.log(credentials);
     }
   </script>
 </body>
