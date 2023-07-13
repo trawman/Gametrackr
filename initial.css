@@ -62,15 +62,16 @@
     
 
     .jst{
-      width: 35%;
+      width: 40%;
       margin-left: 50%;
+
     }
 
     .seta{
       width: 5%;
       margin-right: 50%;
       margin-left: 50%;
-      bottom: 0;
+      bottom: 52;
       position: relative;
     }
 
@@ -81,8 +82,8 @@
     }
 
     p.white{
-      position: absolute;
-      margin-top: 380px;
+      position: relative;
+      margin-top: 320px;
       font-style: normal;
       font-weight: 500;
       font-size: 32px;
@@ -91,8 +92,7 @@
     }
 
     h1.gray{
-      position: absolute;
-      margin-top: 280px;
+      margin-top: 220px;
       font-style: normal;
       font-weight: 600;
       font-size: 90px;
@@ -102,7 +102,11 @@
 
 
     .bot{
-      height: 500px;
+      height: 700px;
+      margin-left: 1200px;
+      text-align: end;
+      align-items: right;
+      max-width: 500px;
     }
     
     .zoom-in {
@@ -182,12 +186,13 @@ margin-left: 10px;
 }
 
 .popup-content {
-  position: absolute;
+  position: relative;
   top: 62%;
   bottom: 0;
   left: 50%;
   width: 80%;
   height: 43px;
+  z-index: 999;
   backdrop-filter: blur(7px);
   transform: translate(-50%, -50%);
   background-color: rgb(141, 76, 202);
@@ -196,4 +201,16 @@ margin-left: 10px;
   text-align: start;
   display: flex;
   align-items: center;
+}
+.foot p{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 42px;
+  color: #adadad;
+}
+.foot{
+  height: 700px;
+  max-width: 500px;
+  text-align: left;
 }

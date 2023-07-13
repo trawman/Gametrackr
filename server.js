@@ -6,6 +6,7 @@ app.use(cookieParser());
 
 app.get('/', (req, res) => {
   const darkModeCookie = req.cookies.darkMode;
+  res.sendFile(__dirname + 'C:/Users/ferna/OneDrive/projeto/index.html');
 
   if (darkModeCookie) {
     const isDarkMode = darkModeCookie === 'true';
@@ -27,6 +28,6 @@ app.get('/toggle-dark-mode', (req, res) => {
   res.redirect('/');
 });
 
-app.listen(8080, () => {
-  console.log('Servidor rodando no link http://localhost:8080');
+app.listen(3000, () => {
+  console.log('Servidor rodando no link http://localhost:3000');
 });

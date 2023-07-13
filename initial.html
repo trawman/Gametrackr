@@ -26,27 +26,85 @@
     <div class="mid" id="middle">
         <a href="login.html"><p class="gray">Se cadastre aqui</p></a>
         <img class="jst" src="imagens/joystick.png">
-        <a href="#bottom"><img id="seta-img" class="seta" src="imagens/seta.svg"></a>
+        <a href="#bottom" onclick="fazerScroll(document.getElementById('bottom').offsetTop)"><img id="seta-img" class="seta" src="imagens/seta.svg"></a>
 
-         <div id="popup" class="popup">
-        <div class="popup-content">
-          <p class="gry">Clicando em confirmar você aceita nossos termos de uso de cookies e <a class="grey" href="privacy.html">politica de privacidade</a>, caso contrário o site poderá não funcionar como esperado.</p>
-          <button id="botao1">aceito</button>
-          <button id="botao2">não aceito</button>
-        </div>  
-    </div>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <p class="gry">Clicando em confirmar você aceita nossos termos de uso de cookies e <a class="grey" href="privacy.html">politica de privacidade</a>, caso contrário o site poderá não funcionar como esperado.</p>
+                <button id="botao1">aceito</button>
+                <button id="botao2">não aceito</button>
+            </div>  
+        </div>
+        <h1 class="gray"> O que é o GameTrackr?</h1>
     </div>
 
     <div class="bot" id="bottom">
-        <h1 class="gray"> O que é o GameTrackr?</h1>
-        <p class="white">É um serviço de matchmaking para jogadores do mundo todo <br>
-             utilizando a IA para encontrar seu melhor parceiro ou oponente.</p>
+        <p class="white">É um serviço de matchmaking para jogadores do mundo todo
+        utilizando a IA para encontrar seu melhor parceiro ou oponente. O GameTrackr utiliza algoritmos avançados de
+        inteligência artificial para analisar perfis de jogadores, preferências de jogo e níveis de habilidade. 
+        Ao considerar vários fatores, o sistema faz combinações inteligentes com outros 
+        jogadores que compartilham interesses e habilidades semelhantes.</p>
     </div>
 
-    <script src="rolagem.js"></script>
-    <script src="server.js"></script>
-</div>
-<script src="cookie.js"></script>
+    <div class="foot" id="foot">
+        <p>O gameTrackr é um site criado por gamers para gamers, e
+            é o serviço definitivo para encontrar jogadores de todo o mundo. 
+            Se você está procurando o parceiro de jogo perfeito ou um oponente desafiador, 
+            o sistema alimentado por inteligência artificial irá ajudá-lo a encontrar a 
+            combinação ideal.</p>
+    </div>
 
+<script src="rolagem.js"></script>
+<script src="cookie.js"></script>
+<script>
+    function fazerScroll(pos) {
+        $(document.body).animate({
+            scrollTop: pos
+        }, 1000);
+    }
+
+    $(document).on('mousewheel', function (e) {
+        e.preventDefault();
+
+        var evento = e.originalEvent;
+        var roda = (evento.wheelDelta) ? evento.wheelDelta : -(evento.detail || evento.deltaY);
+        roda < 0 ? posicao.atual++ : posicao.atual--;
+        if (posicao.atual < 0) posicao.atual = 0;
+        if (posicao.atual > posicao.total) posicao.atual = posicao.total;
+        fazerScroll(posicao.elementos[posicao.atual]);
+    });
+
+    $('#progress-nav a').on('click', function (e) {
+        e.preventDefault();
+        var idDestino = $(this).data('scene');
+        var posicaoDestino = $('#' + idDestino).position().top;
+        fazerScroll(posicaoDestino);
+    });
+    var arrowImg = document.getElementById('seta-img');
+    var initialScrollPosition = window.scrollY;
+
+    function hideArrow() {
+        arrowImg.classList.add('hidden');
+        window.removeEventListener('scroll', checkScrollPosition);
+    }
+
+    function showArrow() {
+        arrowImg.classList.remove('hidden');
+        window.addEventListener('scroll', checkScrollPosition);
+    }
+
+    function checkScrollPosition() {
+        if (window.scrollY > initialScrollPosition) {
+            hideArrow();
+        } else {
+            showArrow();
+        }
+    }
+
+    arrowImg.addEventListener('click', hideArrow);
+    window.addEventListener('scroll', checkScrollPosition);
+</script>
+
+</div>
 </body>
 </html>
